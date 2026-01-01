@@ -13,8 +13,9 @@
     /* Hero */
     .hero { text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #6C63FF 0%, #8360c3 100%); color: white; }
     .hero h1 { font-size: 48px; margin-bottom: 20px; }
-    .hero p { font-size: 22px; margin-bottom: 30px; }
-    .buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .hero p { font-size: 22px; margin-bottom: 20px; }
+    .cta-note { font-size:16px; color:#eee; margin-top:10px; }
+    .buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top:20px; }
     .button { padding: 16px 32px; border-radius: 30px; font-weight: bold; transition: all 0.3s ease; }
     .primary { background: #fff; color: #6C63FF; }
     .primary:hover { background: #f0f0f0; }
@@ -34,6 +35,7 @@
     /* Footer */
     footer { text-align: center; padding: 40px; font-size: 14px; color: #555; }
     footer a { margin: 0 10px; color: #555; }
+    .footer-business { margin-top:10px; color:#555; }
 
     @media(max-width:600px) { .hero h1 { font-size: 36px; } .hero p { font-size: 18px; } }
   </style>
@@ -44,9 +46,10 @@
     <h1>ניהול תורים אוטומטי ב-WhatsApp</h1>
     <p>הלקוחות קובעים תור לבד. אתה מתמקד בעבודה.</p>
     <div class="buttons">
+      <a href="https://wa.me/YOURNUMBER" class="button secondary">דבר איתנו ב-WhatsApp</a>
       <a href="#" class="button primary">התחל התקנה חינמית</a>
-      <a href="#" class="button secondary">דבר איתנו ב-WhatsApp</a>
     </div>
+    <p class="cta-note">הלקוח שולח את ההודעה ראשון – אישור מלא לפי WhatsApp</p>
   </div>
 
   <div class="section features">
@@ -73,6 +76,7 @@
     <a href="privacy.html">מדיניות פרטיות</a>
     <a href="terms.html">תנאי שימוש</a>
     <a href="data-deletion.html">מחיקת נתונים</a>
+    <p class="footer-business">Managed by <strong>Your Business Name</strong></p>
     <p>© 2026</p>
   </footer>
 

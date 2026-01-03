@@ -2,81 +2,184 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>ניהול תורים ב-WhatsApp</title>
+  <title>TorBot – ניהול תורים ב-WhatsApp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="בוט WhatsApp לניהול תורים אוטומטי לעסקים קטנים">
+  <meta name="description" content="TorBot הוא בוט WhatsApp לניהול תורים אוטומטי לעסקים שנותנים שירות לפי תור">
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Assistant', sans-serif; background: #f9f9f9; color: #111; line-height: 1.7; }
+    body { margin: 0; font-family: 'Assistant', sans-serif; background: #f9f9f9; color: #111; line-height: 1.8; }
     a { text-decoration: none; }
 
     /* Hero */
-    .hero { text-align: center; padding: 100px 20px; background: linear-gradient(135deg, #6C63FF 0%, #8360c3 100%); color: white; }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #6C63FF 0%, #8360c3 100%);
+      color: white;
+    }
     .hero h1 { font-size: 48px; margin-bottom: 20px; }
     .hero p { font-size: 22px; margin-bottom: 20px; }
     .cta-note { font-size:16px; color:#eee; margin-top:10px; }
-    .buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top:20px; }
-    .button { padding: 16px 32px; border-radius: 30px; font-weight: bold; transition: all 0.3s ease; }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top:20px;
+    }
+    .button {
+      padding: 16px 32px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
     .primary { background: #fff; color: #6C63FF; }
     .primary:hover { background: #f0f0f0; }
     .secondary { background: transparent; border: 2px solid #fff; color: #fff; }
     .secondary:hover { background: rgba(255,255,255,0.2); }
 
     /* Sections */
-    .section { max-width: 1000px; margin: auto; padding: 80px 20px; background: white; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); margin-bottom: 40px; }
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 20px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+    }
     .section-alt { background: #f0f0f0; }
     h2 { font-size: 32px; margin-bottom: 25px; text-align: center; }
 
     /* Features Grid */
-    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
-    .feature { background: #fff; padding: 30px 20px; border-radius: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
-    .feature:hover { transform: translateY(-5px); }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+    .feature {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+
+    /* Reviews */
+    .review {
+      background:#fafafa;
+      border-radius:15px;
+      padding:25px;
+      margin-bottom:20px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.05);
+    }
 
     /* Footer */
-    footer { text-align: center; padding: 40px; font-size: 14px; color: #555; }
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      color: #555;
+    }
     footer a { margin: 0 10px; color: #555; }
-    .footer-business { margin-top:10px; color:#555; }
+    .footer-business { margin-top:10px; }
 
-    @media(max-width:600px) { .hero h1 { font-size: 36px; } .hero p { font-size: 18px; } }
+    @media(max-width:600px) {
+      .hero h1 { font-size: 36px; }
+      .hero p { font-size: 18px; }
+    }
   </style>
 </head>
 <body>
 
   <div class="hero">
-    <h1>ניהול תורים אוטומטי ב-WhatsApp</h1>
-    <p>הלקוחות קובעים תור לבד. אתה מתמקד בעבודה.</p>
+    <h1>TorBot – ניהול תורים אוטומטי ב-WhatsApp</h1>
+    <p>הלקוחות קובעים תור לבד. העסק מתמקד בעבודה.</p>
     <div class="buttons">
       <a href="https://wa.me/YOURNUMBER" class="button secondary">דבר איתנו ב-WhatsApp</a>
-      <a href="#" class="button primary">התחל התקנה חינמית</a>
+      <a href="#" class="button primary">התחל התקנה</a>
     </div>
-    <p class="cta-note">הלקוח שולח את ההודעה ראשון – אישור מלא לפי WhatsApp</p>
+    <p class="cta-note">הלקוח שולח את ההודעה ראשון – תואם למדיניות WhatsApp</p>
+  </div>
+
+  <div class="section">
+    <h2>מה זה TorBot?</h2>
+    <p>
+      TorBot הוא בוט אוטומטי הפועל בתוך WhatsApp ומאפשר ללקוחות לקבוע תור לעסק
+      ללא שיחות טלפון וללא התכתבות ידנית.
+      הבוט עונה רק ללקוחות שפנו מיוזמתם, שואל שאלות פשוטות,
+      ומציע זמנים פנויים לפי ההגדרות של העסק.
+    </p>
+    <p>
+      הפתרון מתאים במיוחד לספרים, קוסמטיקאיות, מכוני יופי, מטפלים עצמאיים
+      וכל עסק שנותן שירות לפי תור.
+    </p>
   </div>
 
   <div class="section features">
     <div class="feature">קביעת תורים 24/7</div>
-    <div class="feature">פחות ביטולים ואי-הופעות</div>
-    <div class="feature">בלי אפליקציות ללקוחות</div>
+    <div class="feature">פחות הודעות ושיחות</div>
+    <div class="feature">אין צורך באפליקציה</div>
     <div class="feature">עובד ישירות ב-WhatsApp</div>
   </div>
 
   <div class="section section-alt">
-    <h2>איך זה עובד</h2>
-    <p style="text-align:center; font-size:20px;">1. הלקוח שולח הודעה ל-WhatsApp של העסק</p>
-    <p style="text-align:center; font-size:20px;">2. הבוט מציע שירותים וזמנים פנויים</p>
-    <p style="text-align:center; font-size:20px;">3. התור מאושר אוטומטית</p>
+    <h2>איך זה עובד – דוגמה אמיתית</h2>
+    <p style="text-align:center; font-size:20px;">
+      1. הלקוח שולח הודעה: “שלום, אני רוצה לקבוע תור”
+    </p>
+    <p style="text-align:center; font-size:20px;">
+      2. TorBot שואל לאיזה שירות ומציג זמנים פנויים
+    </p>
+    <p style="text-align:center; font-size:20px;">
+      3. הלקוח בוחר זמן והתור נקבע אוטומטית ✔️
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>מה הלקוחות חווים?</h2>
+    <p>
+      הלקוחות מקבלים חוויה ברורה, מהירה ומסודרת – בלי לחכות למענה
+      ובלי בלבול. כל התהליך מתבצע בתוך WhatsApp,
+      האפליקציה שהם כבר משתמשים בה ביום-יום.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>ביקורות מלקוחות (דוגמאות)</h2>
+
+    <div class="review">
+      ⭐⭐⭐⭐⭐<br>
+      “מאז שהתחלתי להשתמש ב-TorBot כמעט ואין לי הודעות על תורים. הכול קורה לבד.”
+      <br><strong>יוסי, ספר</strong>
+    </div>
+
+    <div class="review">
+      ⭐⭐⭐⭐⭐<br>
+      “הלקוחות מרגישים שהעסק הרבה יותר מסודר ומקצועי.”
+      <br><strong>מיכל, קוסמטיקאית</strong>
+    </div>
+
+    <div class="review">
+      ⭐⭐⭐⭐⭐<br>
+      “חוסך לי לפחות שעה ביום של התכתבויות.”
+      <br><strong>דני, ברבר שופ</strong>
+    </div>
   </div>
 
   <div class="section">
     <h2>תמחור</h2>
     <p style="text-align:center; font-size:22px;"><strong>החל מ-₪149 לחודש</strong></p>
-    <p style="text-align:center; color:#555; font-size:18px;">כולל בוט מותאם אישית, הגדרה ותמיכה מלאה</p>
+    <p style="text-align:center; color:#555; font-size:18px;">
+      כולל בוט מותאם אישית, הגדרה ראשונית ותמיכה
+    </p>
   </div>
 
   <footer>
     <a href="privacy.html">מדיניות פרטיות</a>
     <a href="terms.html">תנאי שימוש</a>
     <a href="data-deletion.html">מחיקת נתונים</a>
-    <p class="footer-business">Managed by <strong>Your Business Name</strong></p>
+    <p class="footer-business">מנוהל על-ידי <strong>TorBot</strong></p>
     <p>© 2026</p>
   </footer>
 
